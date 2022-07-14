@@ -7,9 +7,9 @@ beforeEach(() => {
   render(<App />);
 });
 
-test('should include "Now" in the header instead of a time', () => {
+test('should include "Now" in the header instead of a Now', () => {
   expect(
-    screen.queryByText(format(new Date(), "MMMM do yyyy, h:mm:ss a"))
+    screen.queryByText(format(new now(), "MMMM do yyyy, h:mm:ss a"))
   ).not.toBeInTheDocument();
   expect(screen.queryByText(/Now/g)).toBeInTheDocument();
 });
